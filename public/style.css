@@ -7,6 +7,54 @@
     font-optical-sizing: auto;
 }
 
+.gradient {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6643032212885154) 0%, rgba(51, 51, 51, 0) 23%);
+}
+
+.home-page {
+    background: url(./images/overhead-view-fern-pushpin-pen-mouse-turquoise-background\ \(1\).jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.explore h1{
+    background: linear-gradient(90deg, rgba(0,0,0,1), rgb(92, 163, 160) 100%);
+    background-clip: text;
+    color:transparent;
+}
+
+nav.navbar {
+    position: absolute;
+    display: flex;
+    background: #6868681c;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a:hover {
+    transform: scale(1.10);
+    transition: ease-in-out;
+}
+
 .card {
     background-color: #333;
     border: none;
@@ -18,10 +66,18 @@
 }
 
 .card:hover {
-    background: #cac8c8f3;
+    background: #88bcb9;
     color: black;
     transform: scale(1.025);
     transition: 200ms transfrom ease-in-out;
+}
+
+/* login-page */
+
+.log-in{
+    max-width: 30rem;
+    margin: auto;
+    background: #88bcb9;
 }
 
 

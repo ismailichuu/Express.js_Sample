@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/header.ejs') %>
+
+<body class="bg-dark">
+    <div class="container mt-5">
+        <div class="row text-center">
+            <div class="col-12 mt-5"> 
+                <form class="log-in p-4 rounded" action="/login" method="post">
+                    <h1 class="mb-4">LOG-IN</h1>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" name="email" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-4">
+                        <input type="password" placeholder="Password" name="password" class="form-control" id="exampleInputPassword1" required>
+                    </div>
+                    <% if (err) { %>
+                         <p class="text-danger" id="errorMsg"><%= err.msg %></p>
+                         <script>
+                            setTimeout(() => {
+                                document.getElementById("errorMsg").style.display = 'none';
+                            }, 3000);
+                         </script>                
+                  <%  } %>
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/script.ejs') %>
+</body>
+
+</html>
